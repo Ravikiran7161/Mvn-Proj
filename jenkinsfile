@@ -1,18 +1,25 @@
 
     
-      node{
-  stage ('Build') {
- 
-    git url: 'https://github.com/Ravikiran7161/Mvn-Proj.git'
- 
-    withMaven(
-       
-        maven: 'M3',
-       
-               mavenSettingsConfig: 'my-maven-settings',
-        mavenLocalRepo: '.repository') {
-  sh "mvn clean install"
- 
-    } 
-  }
+   pipeline {
+    agent any
+    tools { 
+        maven 'Maven3.1.1' 
+        
+    }
+    stages {
+        stage ('Initialize') {
+            steps {
+                sh '''
+                    echo "PATH = ${PATH}"
+                    echo "M2_HOME = ${M2_HOME}"
+                ''' 
+            }
+        }
+
+        stage ('Build') {
+            steps {
+                echo 'This is a minimal pipeline.'
+            }
+        }
+    }
 }
