@@ -1,0 +1,18 @@
+
+    
+      node{
+  stage ('Build') {
+ 
+    git url: 'https://github.com/Ravikiran7161/Mvn-Proj.git'
+ 
+    withMaven(
+       
+        maven: 'M3',
+       
+               mavenSettingsConfig: 'my-maven-settings',
+        mavenLocalRepo: '.repository') {
+  sh "mvn clean install"
+ 
+    } 
+  }
+}
