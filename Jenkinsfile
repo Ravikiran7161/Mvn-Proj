@@ -6,10 +6,7 @@
     {
      stage('Checkout external proj') {
         steps {
-            git branch: 'master',
-                url: 'https://github.com/Ravikiran7161/Mvn-Proj.git'
-
-            sh "ls -lat"
+            git 'https://github.com/Ravikiran7161/Mvn-Proj.git'
         }
     } 
      stage('---clean---') {
