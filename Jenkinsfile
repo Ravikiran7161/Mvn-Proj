@@ -12,7 +12,7 @@
             sh "ls -lat"
         }
     }
-   stage('Checkout code') {
+     stage('Checkout code') {
         steps {
             checkout scm
         }   
