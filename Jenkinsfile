@@ -11,11 +11,7 @@
 
             sh "ls -lat"
         }
-    }
-     stage('Checkout code') {
-        steps {
-            checkout scm
-        }   
+    } 
      stage('---clean---') {
             steps {
                 sh "mvn clean"
