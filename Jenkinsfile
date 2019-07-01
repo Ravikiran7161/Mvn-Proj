@@ -1,23 +1,15 @@
 
- pipeline {
-  agent any
-    stages 
-    {
-     stage('---clean---') {
-            steps {
-                sh "mvn clean"
-            }
-        }
-        stage('--test--') {
-            steps {
-                sh "mvn test"
-            }
-        }
-        stage('--package--') {
-            steps {
-                sh "mvn package"
-            }
-        }
-    }
+node{
+ stage('SCM checkout') {
+  git 'https://github.com/Ravikiran7161/Mvn-Proj.git'
+ }
+ stage('clean-mvn') {
+  sh 'mvn clean'
+ }
+ stage('test-mvn') {
+  sh 'mvn test'
+ }
+ stage('pack-mvn') {
+  sh 'mvn package'
+ }
 }
- 
