@@ -1,6 +1,19 @@
 
  pipeline {
   agent { label 'docker'}
+  stage('Checkout external proj') {
+        steps {
+            git branch: 'master',
+                url: 'https://github.com/Ravikiran7161/Mvn-Proj.git'
+
+            sh "ls -lat"
+        }
+    }
+   stage('Checkout code') {
+        steps {
+            checkout scm
+        }
+    }
     stages 
     {
         stage('---clean---') {
