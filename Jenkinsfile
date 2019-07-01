@@ -6,7 +6,7 @@
     {
      stage('Checkout external proj') {
         steps {
-            git 'https://github.com/Ravikiran7161/Mvn-Proj.git'
+            git credentialsId: 'c0ad1fa0-7f45-485e-817a-61876d7ad7ab', url: 'https://github.com/Ravikiran7161/Mvn-Proj.git'
         }
     } 
      stage('---clean---') {
