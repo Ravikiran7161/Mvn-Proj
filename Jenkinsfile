@@ -12,4 +12,7 @@ node{
  stage('pack-mvn') {
   sh 'mvn package'
  }
+ stage('build docker image'){
+  sh 'docker build -t ravikiran8161/openjdk:8-jre-alpine .'
+ }
 }
