@@ -1,2 +1,2 @@
 From openjdk:8-jre-alpine
-copy target/*.war /usr/local
+copy /root/jenkins/workspace/Pipe01/target/*.war /usr/local
