@@ -15,4 +15,6 @@ node{
  stage('build docker image'){
   sh 'docker build -t ravikiran8161/openjdk:8-jre-alpine .'
  }
+ stage('push docker image'){
+  sh 'docker push ravikiran8161/openjdk:8-jre-alpine'
 }
