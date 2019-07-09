@@ -1,7 +1,7 @@
 
 node{
  stage('SCM checkout') {
-  git 'https://github.com/Ravikiran7161/Mvn-Proj.git'
+  git 'https://github.com/Ravikiran7161/Dockerization.git'
  }
  stage('clean-mvn') {
   sh 'mvn clean'
@@ -22,6 +22,6 @@ node{
   sh 'docker push ravikiran8161/openjdk:8-jre-alpine'
  }
  stage('build container'){
- sh 'docker run -p 8080:8080 --name my-app900 ravikiran8161/openjdk:8-jre-alpine'
+ sh 'docker run -p 8080:8080 --name my-app911 ravikiran8161/openjdk:8-jre-alpine'
  }
 }
