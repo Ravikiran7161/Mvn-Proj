@@ -22,6 +22,6 @@ node{
   sh 'docker push ravikiran8161/openjdk:8-jre-alpine'
  }
  stage('build container'){
- sh 'docker run -p 80:8081 -d --name my-app09 ravikiran8161/openjdk:8-jre-alpine'
+ sh 'docker run -p 80:8081 -d --name my-app99 ravikiran8161/openjdk:8-jre-alpine'
  }
 }
