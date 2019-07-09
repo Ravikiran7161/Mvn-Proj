@@ -17,7 +17,7 @@ node{
  }
  stage('push docker image'){
   withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
-   sh "docker -u ravikiran8161 -p ${dockerhubpwd}"
+   sh "docker login -u ravikiran8161 -p ${dockerhubpwd}"
  }
   sh 'docker push ravikiran8161/openjdk:8-jre-alpine'
  }
