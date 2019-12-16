@@ -26,10 +26,18 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <scm>
+    <developerConnection>scm:git:https://github.com/Ravikiran7161/Mvn-Proj.git</developerConnection>
+  </scm>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
+         <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>3.0.0-M1</version>
+      </plugin>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
