@@ -5,7 +5,7 @@
 
   <groupId>rk</groupId>
   <artifactId>demo</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.5-SNAPSHOT</version>
 
   <name>demo</name>
   <!-- FIXME change it to the project's website -->
@@ -27,7 +27,7 @@
   </dependencies>
   <scm>
     <developerConnection>scm:git:https://github.com/Ravikiran7161/Mvn-Proj.git</developerConnection>
-    <tag>demo-1.0.4</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <build>
